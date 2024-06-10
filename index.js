@@ -4,7 +4,7 @@ import { setSender, sendMessage } from './functions.js';
 const app = express();
 app.use(express.json());
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 10000;
 
 const checkAuth = (req, res, next) => {
     const password = req.headers['x-api-key']; 

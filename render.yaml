@@ -11,29 +11,7 @@ services:
       - key: PUPPETEER_SKIP_CHROMIUM_DOWNLOAD
         value: "true"
     ports:
-      - 8000
-    disk:
-      name: user-data
-      mountPath: /usr/src/app/user-data
-      sizeGB: 1
-
-services:
-  - type: web
-    name: whatsapp-puppeteer
-    runtime: docker
-    plan: starter
-    dockerfilePath: Dockerfile
-    envVars:
-      - key: NODE_ENV
-        value: production
-      - key: PUPPETEER_EXECUTABLE_PATH
-        value: /usr/bin/google-chrome-stable
-      - key: PUPPETEER_SKIP_CHROMIUM_DOWNLOAD
-        value: true
-    ports:
-      - 8000
-    buildCommand: npm ci
-    startCommand: node index.js
+      - 1000
     disk:
       name: user-data
       mountPath: /usr/src/app/user-data
