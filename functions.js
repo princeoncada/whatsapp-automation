@@ -9,7 +9,7 @@ export async function setSender() {
             "--no-sandbox",
             "--single-process",
             "--no-zygote",
-            '--user-data-dir=/usr/src/app/user-data'
+            '--user-data-dir=./user-data'
         ],
         executablePath:
             process.env.NODE_ENV === "production"
@@ -60,7 +60,7 @@ export async function sendMessage(message) {
             "--no-sandbox",
             "--single-process",
             "--no-zygote",
-            '--user-data-dir=/usr/src/app/user-data'
+            '--user-data-dir=./user-data'
         ],
         executablePath:
             process.env.NODE_ENV === "production"
