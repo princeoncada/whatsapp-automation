@@ -17,7 +17,7 @@ const checkAuth = (req, res, next) => {
     }
 };
 
-app.post('/set-sender', checkAuth, async (req, res) => {
+app.post('/set-sender', async (req, res) => {
     try {
         await setSender();
         res.status(200).send("Sender set successfully!");
@@ -26,7 +26,7 @@ app.post('/set-sender', checkAuth, async (req, res) => {
     }
 })
 
-app.post('/send-message', checkAuth, async (req, res) => {
+app.post('/send-message', async (req, res) => {
     try {
         await sendMessage(req.body.message);
         res.status(200).send("Message sent successfully!");

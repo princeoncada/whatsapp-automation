@@ -1,12 +1,14 @@
+@baseURL = https://whatsapp-automation-v422.onrender.com
+
 ### see server running
-GET https://whatsapp-automation-fd7b.onrender.com/
+GET {{baseURL}}
 
 ### set sender
-POST https://whatsapp-automation-fd7b.onrender.com/set-sender
+POST {{baseURL}}/set-sender
 x-api-key: ass123
 
 ### send message
-POST https://whatsapp-automation-fd7b.onrender.com/send-message
+POST {{baseURL}}/send-message
 x-api-key: ass123
 Content-Type: application/json
 
@@ -15,7 +17,7 @@ Content-Type: application/json
 }
 
 ### send message with line breaks (\n> )
-POST https://whatsapp-automation-fd7b.onrender.com/send-message
+POST {{baseURL}}/send-message
 x-api-key: ass123
 Content-Type: application/json
 
