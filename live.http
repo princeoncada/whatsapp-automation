@@ -1,15 +1,13 @@
-@baseURL = https://whatsapp-automation-v422.onrender.com
+@baseURL = https://whatsapp-automation-pm0i.onrender.com
 
 ### see server running
 GET {{baseURL}}
 
 ### set sender
 POST {{baseURL}}/set-sender
-x-api-key: ass123
 
 ### send message
 POST {{baseURL}}/send-message
-x-api-key: ass123
 Content-Type: application/json
 
 {
@@ -18,7 +16,6 @@ Content-Type: application/json
 
 ### send message with line breaks (\n> )
 POST {{baseURL}}/send-message
-x-api-key: ass123
 Content-Type: application/json
 
 {
