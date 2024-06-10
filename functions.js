@@ -3,6 +3,7 @@ import 'dotenv/config';
 
 export async function setSender() {
     const browser = await puppeteer.launch({
+        headless: true,
         args: [
             "--disable-setuid-sandbox",
             "--no-sandbox",
@@ -55,12 +56,15 @@ export async function setSender() {
 
 export async function sendMessage(message) {
     const browser = await puppeteer.launch({
+        headless: true,
         args: [
             "--disable-setuid-sandbox",
             "--no-sandbox",
             "--single-process",
             "--no-zygote",
-            '--user-data-dir=./user-data'
+            process.env.NODE_ENV === "production" 
+                ? '--user-data-dir=/usr/src/app/user-data' 
+                : '--user-data-dir=./user-data-dev'
         ],
         executablePath:
             process.env.NODE_ENV === "production"

@@ -11,7 +11,7 @@ services:
       - ./user-data:/usr/src/app/user-data
       - /usr/src/app/node_modules
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
       - PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
       - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 

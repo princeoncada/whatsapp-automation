@@ -1,0 +1,24 @@
+### see server running
+GET http://localhost:8000
+
+### set sender
+POST http://localhost:8000/set-sender
+x-api-key: ass123
+
+### send message
+POST http://localhost:8000/send-message
+x-api-key: ass123
+Content-Type: application/json
+
+{
+    "message": "Hello, World!"
+}
+
+### send message with line breaks (\n> )
+POST http://localhost:8000/send-message
+x-api-key: ass123
+Content-Type: application/json
+
+{
+    "message": "here are your late busses:\n> bcm123\n> bcm321\n> bcm213\n\nhere are your delayed busses:\n> bcm123\n> bcm321\n> bcm213\n\nhere are your cancelled busses:\n> bcm123\n> bcm321\n> bcm213\n"
+}

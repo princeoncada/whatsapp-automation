@@ -1,0 +1,24 @@
+### see server running
+GET https://whatsapp-automation-fd7b.onrender.com/
+
+### set sender
+POST https://whatsapp-automation-fd7b.onrender.com/set-sender
+x-api-key: ass123
+
+### send message
+POST https://whatsapp-automation-fd7b.onrender.com/send-message
+x-api-key: ass123
+Content-Type: application/json
+
+{
+    "message": "Hello, World!"
+}
+
+### send message with line breaks (\n> )
+POST https://whatsapp-automation-fd7b.onrender.com/send-message
+x-api-key: ass123
+Content-Type: application/json
+
+{
+    "message": "here are your late busses:\n> bcm123\n> bcm321\n> bcm213\n\nhere are your delayed busses:\n> bcm123\n> bcm321\n> bcm213\n\nhere are your cancelled busses:\n> bcm123\n> bcm321\n> bcm213\n"
+}
